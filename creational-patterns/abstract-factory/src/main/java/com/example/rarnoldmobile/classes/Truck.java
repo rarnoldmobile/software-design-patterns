@@ -9,12 +9,12 @@ public class Truck implements Vehicle {
 		set_initProcedure(initProcedure);
 	}
 	public void start() {
-		System.out.println("Truck is starting");
+		this.testTruck();
 		
 	}
 	
-	public void testTruck() {
-		System.out.println("I am a truck");
+	private void testTruck() {
+		System.out.println("I am specific to truck");
 	}
 	
 	public String get_initProcedure() {

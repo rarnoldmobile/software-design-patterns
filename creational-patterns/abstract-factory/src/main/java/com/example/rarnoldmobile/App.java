@@ -2,6 +2,7 @@ package com.example.rarnoldmobile;
 
 import com.example.rarnoldmobile.classes.*;
 import com.example.rarnoldmobile.factory.*;
+import com.example.rarnoldmobile.interfaces.Vehicle;
 
 
 /**
@@ -13,13 +14,11 @@ public class App
     public static void main( String[] args )
     {
         BaseFactory vehicleFactory = ManagerFactory.getFactory("vehicle");
-        Car car = (Car) vehicleFactory.getVehicle("car");
+        Vehicle car = (Car) vehicleFactory.getVehicle("car");
         
         car.start();
-        car.testCar();
         
-        Truck truck = (Truck) vehicleFactory.getVehicle("truck");
+        Vehicle truck = vehicleFactory.getVehicle("truck");
         truck.start();
-        truck.testTruck();
     }
 }

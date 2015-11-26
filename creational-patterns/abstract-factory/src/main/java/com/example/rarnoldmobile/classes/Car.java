@@ -5,11 +5,11 @@ import com.example.rarnoldmobile.interfaces.Vehicle;
 public class Car implements Vehicle {
 
 	public void start() {
-		System.out.println("Starting the vehicle");
+		this.testCar();
 		
 	}
 	
-	public void testCar() {
+	private void testCar() {
 		System.out.println("I am specific to car");
 	}
 
