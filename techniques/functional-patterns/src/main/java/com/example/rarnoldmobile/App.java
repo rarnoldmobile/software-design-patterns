@@ -10,6 +10,18 @@ import com.example.rarnoldmobile.classes.*;
 
 public class App 
 {
+
+
+	public static boolean TestSchool(School school) {
+		if (school.getTeacherCount() > 15 & school.getTeacherCount() < 30) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	
+	
     public static void main( String[] args )
     {
         List<School> schoolList = new ArrayList<School>();
@@ -40,6 +52,14 @@ public class App
         System.out.println("School count with more than 299 students: " + school300plus);
         System.out.println("School names: " + schoolNames);
         
+        System.out.println("Schools between 15 and 30 teachers:");
+        
+        
+        for (School s : schoolList)  {
+        	if (TestSchool(s)) {
+        		System.out.println(s.getSchoolName());
+        	}
+        }
         
     }
 }
